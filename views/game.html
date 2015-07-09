@@ -2,6 +2,15 @@
 <html>
 <% include ../partials/header.html %>
 <body>
-  <% include ../partials/quiz.html %>
+  <div>
+  <% include ../partials/navigation.html %>
+  <div class="game-container">
+    <div style="float: left">
+      <% include ../partials/quiz.html %>
+    </div>
+    <div style="float: left; clear: left">
+      <% include ../partials/arrows.html %>
+    </div>
+  </div>
 </body>
 </html>

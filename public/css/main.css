@@ -1,29 +1,35 @@
-a.shortcuts {
-	display: block;
-	float: left;
-	margin-left: 50px;
-	width: 200px;
-	height: 200px;
+#menu {
+	width:500px;
+	height: 50px;
+	text-align: center;
+	display: table;
 }
 
-a.clubs-link {
-	background: url(../images/icons/clubs.jpg);
-	background-size: 200px 200px;
+#menu ul {
+  display:table-row;
 }
 
-a.diamonds-link {
-	background: url(../images/icons/diamonds.jpg);
-	background-size: 200px 200px;
+#menu ul li {
+	list-style:none;
+	display:table-cell;
+	vertical-align: middle;
 }
 
-a.hearts-link {
-	background: url(../images/icons/hearts.jpg);
-	background-size: 200px 200px;
+#menu ul li:first-child {
+    text-align: left;
+    padding-left: 10px;
 }
 
-a.spades-link {
-	background: url(../images/icons/spades.jpg);
-	background-size: 200px 200px;
+#menu img {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.game-container {
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width: auto;
 }
 
 /* entire container, keeps perspective */
@@ -84,14 +90,25 @@ a.spades-link {
 	position: relative;
 }
 
-	.vertical .back {
-		transform: rotateX(180deg);
-	}
+.vertical .back {
+	transform: rotateX(180deg);
+}
 
-	.vertical.flip-container:hover .back {
-	    transform: rotateX(0deg);
-	}
+.vertical.flip-container:hover .back {
+    transform: rotateX(0deg);
+}
 
-	.vertical.flip-container:hover .front {
-	    transform: rotateX(180deg);
-	}
+.vertical.flip-container:hover .front {
+    transform: rotateX(180deg);
+}
+
+.iconmelon,
+.im {
+  position: relative;
+  width:64px;
+  height: 64px;
+  display: inline-block;
+	margin-left: 65px;
+  fill: #525151;
+	float: left;
+}

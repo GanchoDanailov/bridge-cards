@@ -15,11 +15,6 @@
 	vertical-align: middle;
 }
 
-#menu ul li:first-child {
-    text-align: left;
-    padding-left: 10px;
-}
-
 #menu img {
 	max-width: 100px;
 	max-height: 100px;

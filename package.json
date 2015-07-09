@@ -1,0 +1,24 @@
+{
+  "name": "bridge-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.3.2",
+    "express": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zdraganov/bridge-cards.git"
+  },
+  "author": "Zhivko Draganov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zdraganov/bridge-cards/issues"
+  },
+  "homepage": "https://github.com/zdraganov/bridge-cards"
+}

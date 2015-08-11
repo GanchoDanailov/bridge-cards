@@ -17,7 +17,7 @@ app.get('/:suit', function (req, res) {
   ranks.forEach(function (rank) {
     cardsWithSuit.push({
       suit: req.params.suit,
-      rank: rank,
+      rank: rank
     });
   });
 

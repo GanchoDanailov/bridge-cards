@@ -17,7 +17,7 @@ app.get('/:suit', function (req, res) {
   ranks.forEach(function (rank) {
     cardsWithSuit.push({
       suit: req.params.suit,
-      rank: rank
+      rank: rank,
     });
   });
 
@@ -29,6 +29,7 @@ app.get('/:suit', function (req, res) {
 app.get('/:suit/:rank', function (req, res) {
   var currentCard = {
     suit: req.params.suit,
+    pageTitle: req.params.suit,
     rank: req.params.rank
   };
 

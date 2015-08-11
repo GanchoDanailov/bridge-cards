@@ -1,8 +1,14 @@
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+<!-- <div class="flip-container" >
   <div class="flipper">
     <div class="front" style="background: url(../images/cards/<%= card.suit %>/<%= card.rank %>/question.jpg); background-repeat: no-repeat; background-size: 100%;">
     </div>
     <div class="back" style="background: url(../images/cards/<%= card.suit %>/<%= card.rank %>/answer.jpg); background-repeat: no-repeat; background-size: 100%;">
     </div>
   </div>
+</div>
+ -->
+
+<div class="container" ontouchstart="this.classList.toggle('hover');">
+	<div class="box-front"><img src="../images/cards/<%= card.suit %>/<%= card.rank %>/question.jpg" alt="card-question"></div>
+	<div class="box-back"><img src="../images/cards/<%= card.suit %>/<%= card.rank %>/answer.jpg" alt="card-answer"></div>   
 </div>

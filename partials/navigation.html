@@ -1,21 +1,22 @@
 <div id="menu">
   <ul>
     <li>
-      <a href="/clubs/two">
+      <a href="/clubs/two"  <% if (card.pageTitle === 'clubs') { %>class="current" <% } %> >
         <img src="../images/icons/clubs.jpg" />
       </a>
     </li>
     <li>
-      <a href="/diamonds/two">
+      <a href="/diamonds/two" <% if (card.pageTitle === 'diamonds') { %>class="current" <% } %> >
         <img src="../images/icons/diamonds.jpg" />
       </a>
     </li>
-      <a href="/hearts/two">
+    <li>
+      <a href="/hearts/two" <% if (card.pageTitle === 'hearts') { %>class="current" <% } %> >
         <img src="../images/icons/hearts.jpg" />
       </a>
     </li>
     <li>
-      <a href="/spades/two">
+      <a href="/spades/two" <% if (card.pageTitle === 'spades') { %>class="current" <% } %> >
         <img src="../images/icons/spades.jpg" />
       </a>
     </li>

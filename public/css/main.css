@@ -1,109 +1,332 @@
+button::-moz-focus-inner {
+    border: 0;
+}
+
 #menu {
-	width:500px;
-	height: 50px;
-	text-align: center;
-	display: table;
+    width: 500px;
+    height: 125px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    background-color: #58595B;
 }
 
 #menu ul {
-  display:table-row;
+    display: table-row;
 }
 
 #menu ul li {
-	list-style:none;
-	display:table-cell;
-	vertical-align: middle;
+    list-style: none;
+    display: table-cell;
+    vertical-align: middle;
+    /* -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s; */
+    -webkit-transition-property: top, bottom;
+    -webkit-transition-duration: 0.5s;
+}
+
+#memu a {
+    display: block;
+}
+
+#menu li:hover {
+    /* top: 50px; */
+    top: 10px;
 }
 
 #menu img {
-	max-width: 100px;
-	max-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .game-container {
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 408px;
+    height: 576px;
 }
 
-/* entire container, keeps perspective */
-.flip-container {
-	float: left;
-	perspective: 1000;
-	transform-style: preserve-3d;
-	margin: 30px;
+.container {
+    margin: 30px auto;
+    /* How pronounced should the 3D effects be */
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -o-perspective: 1000;
+    width: 408px;
+    height: 576px;
+    position: relative;
+    /*Some UI */
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 28px;
+    line-height: 150px;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
-/*  UPDATED! flip the pane when hovered */
-.flip-container:hover .back {
-	transform: rotateY(0deg);
+.container img {
+    width: 100%;
+    height: 100%;
 }
-.flip-container:hover .front {
+
+.box-front,
+.box-back {
+    /* Enable 3D transforms */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #0090d9;
+    /* Animate the transitions */
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+    color: #FFF;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.box-back {
+    /* The back side is flipped 180 deg by default */
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
-	width: 384px;
-	height: 576px;
+.show-card-answer .box-front {
+    /* When the container is hovered, flip the front side and hide it .. */
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
+.show-card-answer .box-back {
+    /* .. at the same time flip the back side into visibility */
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
 }
 
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: absolute;
-	top: 0;
-	left: 0;
+.btn-container {
+    margin-top: 25px;
 }
 
-/*  UPDATED! front pane, placed above back */
-.front {
-	z-index: 2;
-	transform: rotateY(0deg);
+
+/* Buttons */
+
+.btn {
+    border: none;
+    font-family: sans-serif;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(-180deg);
+
+/* Button 5 */
+
+.btn-5 {
+    background: #58595B;
+    color: #fff;
+    height: 50px;
+    min-width: 260px;
+    font-size: 16px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    float: left;
+    margin: 0 1px;
 }
 
-/*
-	Some vertical flip updates
-*/
-.vertical.flip-container {
-	position: relative;
+.btn-5:active {
+    background: #54585F;
+    top: 2px;
 }
 
-.vertical .back {
-	transform: rotateX(180deg);
+.btn-5 span {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    -webkit-transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: all 0.5s;
+    -moz-backface-visibility: hidden;
+    transition: all 0.5s;
+    backface-visibility: hidden;
 }
 
-.vertical.flip-container:hover .back {
-    transform: rotateX(0deg);
+.btn-5:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 3.2;
+    font-size: 100%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
-.vertical.flip-container:hover .front {
-    transform: rotateX(180deg);
+
+/* Button 5a */
+
+.btn-5a:before {
+    content: "hide answer";
 }
 
-.iconmelon,
-.im {
-  position: relative;
-  width:64px;
-  height: 64px;
-  display: inline-block;
-	margin-left: 100px;
-  fill: #525151;
-	float: left;
+.btn-5a:before {
+    left: 0;
+    top: -100%;
+}
+
+.btn-5-click:before {
+    top: 0;
+}
+
+.btn-5-click span {
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+}
+
+
+/* Button 5b */
+
+.btn-prev,
+.btn-next {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    min-width: 50px;
+    font-size: 60px;
+    line-height: 51px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.btn-prev span{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right: 20px solid white;
+}
+.btn-prev:before {
+    content: ' ';
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right: 20px solid white;
+}
+
+.btn-prev:hover span {
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%);
+}
+
+.btn-prev:before {
+    left: 100%;
+    top: 5px;
+}
+
+.btn-prev:hover:before {
+    left: 10px;
+}
+.btn-next{
+    padding-left: 20px;
+}
+
+.btn-next span{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+}
+
+.btn-next:before {
+    content: ' ';
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+}
+
+.btn-next:hover span {
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    transform: translateX(200%);
+}
+
+.btn-next:before {
+    left: -100%;
+    top: 5px;
+}
+
+.btn-next:hover:before {
+    left: 20px;
+}
+
+.btn-next,
+.btn-prev {
+    margin-top: 5px;
+}
+
+.btn-show {
+    width: 73%;
+}
+
+.btn-show span {
+    position: relative;
+    top: -8px;
+    width: 105%;
+}
+
+.current {
+    top: 5px;
+    position: relative;
 }
